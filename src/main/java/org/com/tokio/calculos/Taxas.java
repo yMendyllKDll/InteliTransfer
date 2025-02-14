@@ -23,7 +23,7 @@ public class Taxas {
         } else if (taxa == 0.0) {
             return 12.0;
         } else {
-            return valor * taxa;
+            return 0.0;
         }
     }
 }

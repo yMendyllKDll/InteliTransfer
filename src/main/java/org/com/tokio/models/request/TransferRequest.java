@@ -15,6 +15,6 @@ public class TransferRequest {
     @JsonProperty("valor")
     private Double valor;
 
-    @JsonProperty("dataAgendamento")
-    private String dataAgendamento;
+    @JsonProperty("dataTransferencia")
+    private String dataTransferencia;
 }

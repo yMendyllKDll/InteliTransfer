@@ -9,6 +9,5 @@ public interface TaxaTransfeRepository extends JpaRepository<taxaTransf, Long> {
 
     @Query(value = "SELECT C.TAXA FROM TAXATRANSF C " +
             " WHERE :qtdDias between C.DIASDE and C.DIASATE", nativeQuery = true)
-    Double findTaxaByDias(Integer qtdDias);
-
+    Double findTaxaByDias(@Param("qtdDias") Integer qtdDias);
 }

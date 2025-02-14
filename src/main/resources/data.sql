@@ -1,13 +1,9 @@
 INSERT INTO transferencia (id,conta_origem, conta_destino, valor, valor_taxa, taxa, dt_agendamento, dt_transferencia)
-VALUES (NEXTVAL('sqteste'),'123456-7', '987654-3', 1000.00, 100.00, 10, '2024-06-28 10:00:00', '2024-06-28 10:30:00');
+VALUES (NEXTVAL('sqteste'),'1234567', '9876543', 62.00, 12, 0, '2025-02-12 10:00:00', '2025-03-13 10:30:00');
 INSERT INTO transferencia (id,conta_origem, conta_destino, valor, valor_taxa, taxa, dt_agendamento, dt_transferencia)
-VALUES (NEXTVAL('sqteste'),'987654-3', '123456-7', 500.00, 100.00, 10, '2024-06-28 11:00:00', '2024-06-28 11:30:00');
+VALUES (NEXTVAL('sqteste'),'9876543', '1234567', 53.00, 3, 0.025, '2025-02-11 11:00:00', '2025-04-13 11:30:00');
 INSERT INTO transferencia (id,conta_origem, conta_destino, valor, valor_taxa, taxa, dt_agendamento, dt_transferencia)
-VALUES (NEXTVAL('sqteste'),'111111-1', '222222-2', 750.00, 100.00, 10, '2024-06-28 12:00:00', '2024-06-28 12:30:00');
-INSERT INTO transferencia (id,conta_origem, conta_destino, valor, valor_taxa, taxa, dt_agendamento, dt_transferencia)
-VALUES (NEXTVAL('sqteste'),'333333-3', '444444-4', 2000.00, 100.00, 10, '2024-06-28 13:00:00', '2024-06-28 13:30:00');
-INSERT INTO transferencia (id,conta_origem, conta_destino, valor, valor_taxa, taxa, dt_agendamento, dt_transferencia)
-VALUES (NEXTVAL('sqteste'),'555555-5', '666666-6', 1500.00, 100.00, 10, '2024-06-28 14:00:00', '2024-06-28 14:30:00');
+VALUES (NEXTVAL('sqteste'),'1111111', '2222222', 750.00, 100.00, 10, '2024-02-10 12:00:00', '2025-05-13 12:30:00');
 
 INSERT INTO taxaTransf (diasDe, diasAte, valor, taxa) VALUES (0, 0, 3.00, 0.025);
 INSERT INTO taxaTransf (diasDe, diasAte, valor, taxa) VALUES (1, 10, 12.00, 0.0);

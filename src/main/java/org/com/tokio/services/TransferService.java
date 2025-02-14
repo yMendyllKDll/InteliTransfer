@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class TransferService {
 
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     @Autowired
     private TransferRepository transferRepository;
@@ -33,8 +33,8 @@ public class TransferService {
     }
 
     public Transferencia criarTransferencia(TransferRequest transfRequest) {
-        LocalDateTime dataAgendamento = LocalDateTime.parse(transfRequest.getDataAgendamento(), FORMATTER);
-        Double taxa = taxas.calcularTaxa(dataAgendamento);
+        LocalDateTime dataTransferencia = LocalDateTime.parse(transfRequest.getDataTransferencia(), FORMATTER);
+        Double taxa = taxas.calcularTaxa(dataTransferencia);
         Double valorTaxa = taxas.calcularValorTaxa(taxa, transfRequest.getValor());
 
         return Transferencia.builder()
@@ -43,8 +43,8 @@ public class TransferService {
                 .taxa(taxa)
                 .valorTaxa(valorTaxa)
                 .valor(transfRequest.getValor() + valorTaxa)
-                .dtAgendamento(dataAgendamento)
-                .dtTransferencia(LocalDateTime.now())
+                .dtAgendamento(LocalDateTime.now())
+                .dtTransferencia(dataTransferencia)
                 .build();
     }
 
