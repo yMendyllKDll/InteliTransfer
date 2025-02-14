@@ -27,7 +27,8 @@ Antes de começar, certifique-se de que você tenha as seguintes ferramentas ins
 ### 1️⃣ Clonar o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/agendamento-transferencias.git
+git clone https://github.com/yMendyllKDll/InteliTransfer.git
+```
 
 ## 📌 Endpoints
 
@@ -52,7 +53,7 @@ git clone https://github.com/seu-usuario/agendamento-transferencias.git
     "dtTransferencia": "13/03/2025 10:30:00"
   }
 ]
-
+```
 ### ✍️ Criar um novo agendamento
 
 - **Método:** `POST`
@@ -66,5 +67,5 @@ git clone https://github.com/seu-usuario/agendamento-transferencias.git
     "valor":"12.00",
     "dataTransferencia":"2025-02-21 18:50"
 }
-
+```
 ##Retorno: Agendamento cadastrado com sucesso.
